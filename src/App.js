@@ -1,5 +1,5 @@
 //TODO: STEP 1 - Import the useState hook.
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./App.css";
 import BottomRow from "./BottomRow";
 
@@ -8,8 +8,8 @@ const fieldGoal = 3;
 
 function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
-  const [homeScoreLions, setHomeScoreLions] = useState(3);
-  const [awayScoreTigers, setAwayScoreTigers] = useState(7);
+  const [homeScoreLions, setHomeScoreLions] = useState(3);  // variable with initial state, new state acts somewhat as a reducer
+  const [awayScoreTigers, setAwayScoreTigers] = useState(7); // parameters will be passed in through the onClick handler
   return (
     <div className="container">
       <section className="scoreboard">
@@ -29,13 +29,6 @@ function App() {
         </div>
         <BottomRow />
       </section>
-
-      {/* return (
-    <div onClick={() => setLightOn(!lightOn)} className="App">
-      {lightOn === false ? <img src={white} /> : <img src={yellow} />}
-    </div>
-  ); */}
-
       <section className="buttons">
         <div className="homeButtons">
           {/* TODO STEP 4 - Now we need to attach our state setter functions to click listeners. */}
